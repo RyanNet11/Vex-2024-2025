@@ -1,0 +1,67 @@
+notes to manipulate direction of robot:
+    
+    to direction amniwheels have to go use a vector from controller 
+    have to solve for direction and magnitude 
+    we get x component form axis 1 and y from axis 2
+    use linear tansformation to get new component vectors for the motor control
+    (three blue one brown)  
+    apply components to vectors
+
+    make compents into vector 
+    multiply by vector  [sqrt2/2,-sqrt2]
+                    [sqrt2/2, sqrt2]
+
+    that only gives the new vector of travel 
+    instead do this thing in this desmos graph https://www.desmos.com/calculator/eibbwpqeyp
+    not the effect we desired it only turned the point 45 degrees without giving any component info 
+    new equation in the equation for the the distance of a point pependicular to a line TRY TO DERVIVE IT USING CALC IT IS THE
+    SHORTEST DISTANCE FROM A POINT TO ANY POINT ON SAID LINE CAN USE MINIMIAZTION EQUATION
+                                                         __________
+    the equation from the internet is D = |Ax+By+C| / (-/ A^2 + B^2 ) where the extression in the abs is the line in the form Ax+By+C = 0 
+    if we run this equation twice, once per wheel axis we will get two vectors one per motor pairing    
+
+    think about using linear algebra dont know the terms but heard of concept the Av1 + Bv2 = v3 where v3 in the vector of the controller 
+    vector one and two are the vectors for the axis of the motor sets the code would solve for A and B and apply those scalings to the vectors
+    of the motors velocities we can also trnsform this to three dimensions for cool robot arm also the vectors are easier to change for smth  
+    like drone mode 
+
+    A<v1x,v1y> + B<v2x,v2y> = <x,y> : use code to solve this equation for some x,y from the controller A(v1x) + B(v2x) = x
+                                                                                                       A(v1y) + B(v2y) = y  solve system 
+
+                                                                                                slove the system on paper its super 
+                                                                                                fucking convoluted in the end you get 
+            B = {x - (v1x)(v1y)(x)} / {(v2y) - (v1x)(v1y)(v2x)}
+            A = {(v2y)x - (v1x)(v1y)(v2x)x - (v2x)y - (v1x)(v1y)(v2x)x} / {(v1x)(v2y) - (v1x)(v1y)(v2x)(v1x)}
+
+            this is the second derivation with not convoluted variables 
+
+            Aq + Bp = x   A<q,r> + B<p,s> = <x,y>
+            Ar + Bs = y 
+
+            A = (yp - sx) / (pr - qs)
+            B = ((pr - qs)x - (ypq - sxq)) / ((pr - qs)p)
+
+    this method is basicly the same with doing it logically and increasing speed solely based on controller values but with some brainstorming 
+    we can use inverse kinematics to add an extra layer of redundancy. 
+    WE CAN USE THIS TO AUTOMATICALLY SET THE POSISTION OF THE ROBOT TO CLIMB AT THE END OF THE GAME
+    it might be better to logic it out we will have to do some funny value clamping to achieve this we should calulate the time it takes to
+    do both calcualtions 
+
+PID controller notes:
+
+    we should make a custom pid for our motors tune per each specific use case 
+    look up the wiki page if you wanna know the standard form (https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller)
+
+    in regards to tuning it would be cool to do some calculus neral network type shit.
+    basiclly we would create a scoring function were we are trying to achieve the smallest 
+    the score would be based on a time to get to setpoint and osilations(idk how to spell that) around the setpoint 
+    then we would take a 3d derivative and find the minimum of the fuction to set the parameters. 
+    the function would have three inputs all coresponding to each pisd term the output of the function would be the score and the 
+    final step would be to learn 3d calculus to minimizes that function. 
+                                                                                    
+                                                                                                 
+
+
+
+                                                                                        
+
