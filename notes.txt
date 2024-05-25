@@ -67,8 +67,9 @@ machine learning algorithm devolopment
     think it applies very heavy to this situation. because the point of the this algorithm is to get a curve as close as possible to another curve
     unlike the videos exaple where we trying to get as close to a discrete outcome. 
 
-    we want to keep this github about robotics and I(david) want to develop this over the summer for a different progject without using robotics 
-    stuff. So im going to use my own github if you want to see the development (davidkrzysiak). 
+    we want to keep this github about robotics and I(david) want to develop this over the summer for a different progject unrelated from robotics 
+    stuff. So im going to use my own github if you want to see the development (davidkrzysiak). this project may or may not be useful 
+    (im hoping it is) for the season so id rather seperate until its complete. 
                                                                                     
                                                                                                  
 
