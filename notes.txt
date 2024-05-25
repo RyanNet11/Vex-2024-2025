@@ -50,7 +50,8 @@ notes to manipulate direction of robot:
 PID controller notes:
 
     we should make a custom pid for our motors tune per each specific use case 
-    look up the wiki page if you wanna know the standard form (https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller)
+    look up the wiki page if you wanna know the standard form 
+    (https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller)
 
     in regards to tuning it would be cool to do some calculus neral network type shit.
     basiclly we would create a scoring function were we are trying to achieve the smallest 
@@ -58,6 +59,15 @@ PID controller notes:
     then we would take a 3d derivative and find the minimum of the fuction to set the parameters. 
     the function would have three inputs all coresponding to each pisd term the output of the function would be the score and the 
     final step would be to learn 3d calculus to minimizes that function. 
+
+machine learning algorithm devolopment 
+
+    we need to develop this to optimizes a contoller. PID is a specific example but using this same general algoritm we could use this to optimize 
+    a position function. three blue one brown has a good video series about neral networks. if you are reading this its a good watch but i dont
+    think it applies very heavy to this situation. because the point of the this algorithm is to get a curve as close as possible to another curve
+    unlike the videos exaple where we trying to get as close to a discrete outcome. 
+
+    -
                                                                                     
                                                                                                  
 
