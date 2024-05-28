@@ -60,6 +60,9 @@ PID controller notes:
     the function would have three inputs all coresponding to each pisd term the output of the function would be the score and the 
     final step would be to learn 3d calculus to minimizes that function. 
 
+    (https://kb.vex.com/hc/en-us/articles/360035591332-V5-Motor-Overview) this is the link for the vex motors it says you are able to change the
+    tuning parameters so we could do that possibly 
+
 machine learning algorithm devolopment 
 
     we need to develop this to optimizes a contoller. PID is a specific example but using this same general algoritm we could use this to optimize 
